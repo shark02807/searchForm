@@ -1,0 +1,39 @@
+@ds-font-family: "Gotham", Helvetica, Arial, sans-serif;
+
+@ds-email-font: Arial, Verdana, Helvetica, sans-serif;
+
+@ds-no-image: "/etc/designs/ds-flagship/ui/img/noimage.png";
+
+// Colors
+@ds-white: #fff;
+@ds-blue: #0077c8;
+@ds-blue2: #44a9ee;
+@ds-orange: #f6a800;
+@ds-gray: #53585b;
+@ds-gray5: #f6f6f6;
+@ds-gray15: #e7e7e7;
+@ds-gray25: #d5d5d5;
+@ds-gray26: #c0c9ce;
+@ds-gray56: #7d8081;
+@ds-gray66: #555759;
+@ds-black: #000;
+@ds-gray75: #80898e;
+@ds-gray83: #aaa;
+@ds-green1: #019d4e;
+@ds-green: #18b14a;
+
+@ds-gray93: rgba(255, 255, 255, .15);
+@ds-gray94: rgba(83, 88, 91, .1);
+@ds-black6: rgba(0, 0, 0, .08);
+@ds-black10: rgba(10, 10, 10, .87);
+
+// Resolutions
+@screen-xs-size: 575.98;
+@screen-sm-size: 767.98;
+@screen-md-size: 991.98;
+@screen-lg-size: 1199.98;
+
+@screen-xs: ~"only screen and (max-width: @{screen-xs-size}px)";
+@screen-sm: ~"only screen and (max-width: @{screen-sm-size}px)";
+@screen-md: ~"only screen and (max-width: @{screen-md-size}px)";
+@screen-lg: ~"only screen and (max-width: @{screen-lg-size}px)";

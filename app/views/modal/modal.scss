@@ -1,0 +1,131 @@
+@import '../../../less/common/variables.less';
+@import '../../../less/common/mixin.less';
+.ds-popup {
+  &-dialog {
+    white-space: normal;
+    text-align: left;
+    width: auto;
+    min-width: 320px;
+    position: relative;
+    background-color: @ds-white;
+    .mediaSmall({
+    width: 100%;
+  });
+  }
+  &-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: fade(@ds-gray25, 89);
+    overflow: auto;
+    overflow-x: hidden;
+    text-align: center;
+    white-space: nowrap;
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+      content: '';
+    }
+    .mediaSmall({
+    background: @ds-white;
+    text-align: left;
+    white-space: normal;
+    &:after {
+      display: none;
+    }
+  });
+  }
+  &-inner {
+    margin: 20px 0;
+    display: inline-block;
+    vertical-align: middle;
+    .mediaSmall({
+    margin: auto;
+    display: block;
+    vertical-align: baseline;
+  });
+  }
+  &-close {
+    font-size: 26px;
+    position: absolute;
+    top: 31px;
+    right: 35px;
+    color: @ds-orange;
+    cursor: pointer;
+    z-index: 1;
+    &:after {
+      content: "\2715";
+      color: @ds-gray40;
+      font-size: 17px;
+    }
+    &.ds--hide{
+      display: none;
+    }
+    &:hover{
+      color: @ds-orange-hover;
+    }
+  }
+  &-alert-text {
+    font-size: 14px;
+  }
+  &-body-lock {
+    overflow: hidden!important;
+  }
+  &-header {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: @ds-blue;
+    .mediaSmall({
+    margin-bottom: 22px;
+  })
+  }
+  &-text {
+    color: @ds-gray;
+  }
+  &-info-content{
+    max-width: 720px;
+    box-sizing: border-box;
+    padding: 34px 54px 34px 28px;
+    .mediaSmall({
+    padding: 50px 15px 30px 15px;
+  });
+    &.ds--symmetric {
+      padding: 35px;
+      .ds-popup-header {
+        margin-right: 20px;
+      }
+      .mediaSmall({
+      padding: 0;
+      .ds-popup-header {
+        margin-right: 0;
+      }
+    });
+    }
+    &.ds--alert {
+      width: 420px;
+      &.ds--wide {
+        width: 520px;
+      }
+    }
+  }
+}
+.ds-popup-alert-buttons {
+  margin-top: 35px;
+  clear: both;
+  overflow: hidden;
+}
+.ds-popup-alert-button {
+  float: right;
+  margin-left: 10px;
+  &.ds--left {
+    float: left;
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}

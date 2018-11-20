@@ -1,0 +1,34 @@
+@import "variables.scss";
+
+.clearfix() {
+
+&:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+};
+
+.mediaXS(@rules) {
+  @media only screen and (max-width: @screen-xs) {
+    @rules();
+  }
+}
+
+.mediaSmall(@rules) {
+  @media only screen and (max-width: @screen-sm) {
+    @rules();
+  }
+}
+
+.mediaMedium(@rules) {
+  @media only screen and (max-width: @screen-md) {
+    @rules();
+  }
+}
+
+.mediaLarge(@rules) {
+  @media only screen and (max-width: @screen-lg) {
+    @rules();
+  }
+}
