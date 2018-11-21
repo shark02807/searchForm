@@ -1,3 +1,0 @@
-#!/bin/sh
-cd cq-webapp/ecom-webapp-view/src/main/content/jcr_root/etc/designs/webpack-build/
-npm run hook-test

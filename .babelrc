@@ -1,16 +1,6 @@
 {
-  "presets": ["react", "es2015", "stage-0"],
-  "env": {
-    "test": {
-      "plugins": [
-        ["module-alias", [
-          {"expose": "Views", "src": "./app/react/views"},
-          {"expose": "Tests", "src": "./tests"},
-          {"expose": "App", "src": "./app/react"},
-          {"expose": "Utilities", "src": "./app/react/utilities"},
-          {"expose": "State", "src": "./app/react/state"}
-        ]
-        ]]
-    }
-  }
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
 }

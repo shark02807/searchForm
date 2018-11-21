@@ -1,0 +1,15 @@
+@import './../../sass/variables';
+
+.ge-text-field {
+  &__label {
+    font-size: 26px;
+  }
+  &__input {
+    display: block;
+    width: 250px;
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid $ge-black;
+  }
+}
