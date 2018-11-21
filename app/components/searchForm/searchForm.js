@@ -1,15 +1,15 @@
 import React from 'react';
-import TextField from 'Components/textField/textField'
-import Button from 'Components/button/button'
-import SearchFormAdditional from 'Components/searchFormAdditional/searchFormAdditional'
-import './searchForm.scss';
+import { connect } from 'react-redux';
+import SearchFormMain from 'Components/searchFormMain/searchFormMain';
+import SearchFormAdditional from 'Components/searchFormAdditional/searchFormAdditional';
 
-const SearchForm = () => <div className="ge-search-form">
-  <div className="ge-search-form__main">
-    <TextField />
-    <Button />
-  </div>
-  <SearchFormAdditional />
+const SearchForm = ({ isAdditionalOpen }) => <div className="ge-search-form">
+  <SearchFormMain />
+  {
+    isAdditionalOpen && <SearchFormAdditional />
+  }
 </div>;
 
-export default SearchForm;
+export default connect(({ searchForm: { isAdditionalOpen } }) => ({
+  isAdditionalOpen
+}))(SearchForm);
