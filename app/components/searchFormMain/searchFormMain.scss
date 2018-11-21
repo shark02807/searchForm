@@ -1,0 +1,10 @@
+@import './../../sass/variables';
+
+.ge-search-form__main {
+  .ge-text-field, .ge-button {
+    display: inline-block;
+  }
+  .ge-button {
+    margin-left: 50px;
+  }
+}

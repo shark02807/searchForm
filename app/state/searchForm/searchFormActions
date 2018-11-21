@@ -1,0 +1,20 @@
+import searchFormActionTypes from './searchFormActionTypes';
+
+const {
+  TOGGLE_ADDITIONAL,
+  FETCH_FIELDS_SUCCESS,
+  FETCH_FIELDS_FAILURE
+} = searchFormActionTypes;
+
+export const toggleAdditional = () => ({
+  type: TOGGLE_ADDITIONAL
+});
+
+export const fetchFieldsSuccess = (data) => ({
+  type: FETCH_FIELDS_SUCCESS,
+  payload: data
+});
+
+export const fetchFieldsFailure = () => ({
+  type: FETCH_FIELDS_FAILURE
+});
